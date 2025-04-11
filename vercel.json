@@ -4,6 +4,11 @@
       {
         "src": "dist/src/index.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "prisma/schema.prisma",
+        "use": "@vercel/static-build",
+        "config": { "command": "prisma generate" }
       }
     ],
     "routes": [
@@ -12,5 +17,4 @@
         "dest": "dist/src/index.js"
       }
     ]
-  }
-  
+  }  
