@@ -5,7 +5,7 @@ import prisma from "../libs/prisma"
 class AuthReposiotories {
 
     async checkUser(data:LoginDto){
-     return await prisma.user.findUnique({
+     return await prisma.user.findFirst({
             where:{email :data.email}
         })
     }

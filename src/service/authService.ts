@@ -38,7 +38,7 @@ try {
             payload:token,
         })
 } catch (error) {
-return serviceErrorHandler<string>(error)
+return serviceErrorHandler<null>(error)
 }
 
 }
